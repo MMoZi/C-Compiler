@@ -1,5 +1,5 @@
 #include "Common.h"
-
+#include "IOManager.h" 
 
 int main(int argc, char** argv)
 {
@@ -7,7 +7,10 @@ int main(int argc, char** argv)
     string path;
     // ±£´æÎ»ÖÃ
     string savePath; 
-  
+
+    IOManager& iomgr = IOManager::get_instance();
+    string contents = iomgr.open(path);
+
 
     return 0;
 }
